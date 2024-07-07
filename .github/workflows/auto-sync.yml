@@ -21,3 +21,4 @@ jobs:
         dst_token: ${{ secrets.GITEE_TOKEN }}
         mappings: ".github=>github"
         force_update: true
+        static_list: "DragonSurvival"
