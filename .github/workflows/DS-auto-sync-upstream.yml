@@ -23,5 +23,5 @@ jobs:
         cd repo1
         git remote add upstream https://github.com/DragonSurvivalTeam/DragonSurvival.git
         git fetch upstream
-        git merge upstream/master
+        git reset --hard upstream/master
         git push origin master
