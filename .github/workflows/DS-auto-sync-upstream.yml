@@ -13,8 +13,8 @@ jobs:
       uses: actions/checkout@v3
     - name: Set Up Git
       run: |
-        git config user.name "FirDragon"
-        git config user.email "2511767981@qq.com"
+        git config --global user.name "FirDragon"
+        git config --global user.email "2511767981@qq.com"
 
       # 仓库1同步
     - name: Sync Repo
