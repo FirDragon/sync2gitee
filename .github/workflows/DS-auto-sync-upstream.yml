@@ -19,10 +19,9 @@ jobs:
       # 仓库1同步
     - name: Sync Repo
       run: |
-        git clone https://github.com/FirDragon/DragonSurvival.git repo1
+        git clone -b master https://github.com/FirDragon/DragonSurvival.git repo1
         cd repo1
         git remote add upstream https://github.com/DragonSurvivalTeam/DragonSurvival.git
-        git fetch upstream
-        git checkout master
+        git fetch upstream master
         git reset --hard upstream/master
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/FirDragon/DragonSurvival.git master --force
+        git push origin master
