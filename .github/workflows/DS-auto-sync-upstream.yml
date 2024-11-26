@@ -24,4 +24,4 @@ jobs:
         git remote add upstream https://github.com/DragonSurvivalTeam/DragonSurvival.git
         git fetch upstream master
         git reset --hard upstream/master
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/FirDragon/DragonSurvival.git master --force
+        git push https://x-access-token:${{ secrets.DS_TOKEN }}@github.com/FirDragon/DragonSurvival.git master --force
