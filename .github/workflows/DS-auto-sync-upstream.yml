@@ -1,0 +1,27 @@
+on:
+  push:
+    branches: master
+  schedule:
+    - cron: '0 0 * * *'
+name: DragonSurvival Sync Upstream
+jobs:
+  run:
+    name: Sync-Upstream-DragonSurvival.
+    runs-on: ubuntu-lates
+    steps:
+    - name:  Sync-Upstream-DragonSurvival.
+      uses: actions/checkout@v3
+    - name: Set Up Git
+      run: |
+        git config user.name "FirDragon"
+        git config user.email "2511767981@qq.com"
+
+      # 仓库1同步
+    - name: Sync Repo
+      run: |
+        git clone https://github.com/FirDragon/DragonSurvival.git repo1
+        cd repo1
+        git remote add upstream https://github.com/DragonSurvivalTeam/DragonSurvival.git
+        git fetch upstream
+        git merge upstream/master
+        git push origin master
